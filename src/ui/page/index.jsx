@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Head from "next/head";
 import GithubIcon from "@/ui/icons/github";
 import YoutubeIcon from "@/ui/icons/youtube";
@@ -12,7 +13,7 @@ export default function Page({
 }) {
   const [opacity, setOpacity] = useState(0);
   useEffect(() => {
-    if (!window.location.href.includes("vercel.app")) return;
+    if (window.location.href.includes("localhost")) return;
     setTimeout(() => setOpacity(100), 500);
   }, []);
 
@@ -30,19 +31,20 @@ export default function Page({
           />
         </Head>
       )}
+
       <div className="relative">
         <div
           className="absolute right-0 -top-8 transition-all duration-700 z-50 w-24"
           style={{ opacity }}>
           <div className="flex flex-col items-end justify-center h-[290px] md:h-screen">
-            <div className="flex flex-col items-center gap-3 bg-gray-800 p-4 md:p-6 rounded-l-3xl">
+            <div className="flex flex-col items-center gap-3 bg-gray-800 p-4 md:p-8 rounded-l-3xl">
               <div>
                 <a
                   target="_blank"
                   href={`https://github.com/devmentorlive-youtube/${id}`}>
                   <div className="flex flex-col items-center w-full gap-1">
                     <GithubIcon className="text-white h-6 w-6 md:h-8 md:w-8 lg:h-12 lg:w-12" />
-                    <div className="text-white text-xs text-center">code</div>
+                    <div className="text-white  text-xs text-center">code</div>
                   </div>
                 </a>
               </div>
@@ -66,6 +68,9 @@ export default function Page({
         </div>
 
         {children}
+      </div>
+      <div className="absolute bottom-10 right-10" style={{ opacity }}>
+        <Image src="/powered-by-vercel.svg" width={212} height={44} />
       </div>
     </>
   );

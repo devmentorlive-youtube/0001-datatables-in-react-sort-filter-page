@@ -1,46 +1,30 @@
-# DevmentorLive NextJS Starter Template
+# Build a Datatable in ReactJS, Sort, Filter, Page Records
 
-## Getting Started
+A huge thank you for Vercel for sponsoring the demo to this lesson so it will always be available to you!
 
-To create an app using this starter
+![Powered by Vercel](https://raw.githubusercontent.com/devmentorlive-youtube/0001-datatables-in-react-sort-filter-page/main/public/powered-by-vercel.svg)
 
-```bash
-npx create-next-app your-app-name -e https://github.com/devmentorlive-youtube/next-tailwind-starter
-```
+## DevmentorLive #0001
 
-## This template uses [TailwindCSS](https://tailwindcss.com/)!
+Your boss comes to you and they say, "So...... we have a couple thousands rows of customer data and we need to be able to display it in a table, and the table columns should be determined by the data itself, so no hard coding! Oh, and we would like to be able to sort in up and down on any column and also filter by any column."
 
-## To run your server (development)
+And you say, "This is React, that's easy!"
 
-```
-cd your-app-name
-npm run dev
-```
+## What you will learn from building this project
 
-## Folder structure
+- How to iterate over an array
+- How to iterate over an object
+- How to extract reusable components
+- How to use render props to make components flexible
+- How to sort and modify collections and state
+- How to filter collections and state
+- How to use conditional rendering
+- React, TailwindCSS, NextJS, and programming best practices and general knowledge
 
-```bash
-src
-├── features
-├── pages
-│   └── index.jsx
-├── ui
-└── index.jsx
-```
+## See this in action!
 
-This app uses a modified/simplified version of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), better suited for modern web development.
+https://0001-datatables-in-react-sort-filter-page.vercel.app/
 
+## Watch the video tutorial on youtube
 
-### /ui
-
-This folder is for your "lego blocks", single purpose React components that can be combined together to make more complicated components, known as Features
-
-
-### /features
-
-This folder is for more complex components, or features. Features are created by composing many UI components and usually, state
-
-
-### /pages
-
-This folder is for navigable components. A router automagically creates urls for anything in this folder. To create a page, combine features and ui components and put them in a component in this page. Typically state is managed in the feature, and any props that come from the server are passed through pages via the return object from getServerSideProps. Those props are then passed down into features as props, or put into a context.
+https://www.youtube.com/watch?v=P-Of2j3uVz0

@@ -69,8 +69,13 @@ export default function Page({
 
         {children}
       </div>
-      <div className="absolute bottom-10 right-10" style={{ opacity }}>
-        <Image src="/powered-by-vercel.svg" width={212} height={44} />
+      <div
+        className="absolute bottom-10 right-0 z-50 mr-4 "
+        style={{ opacity }}>
+        <div className="text-[0.7rem] font-medium text-right -mb-1">
+          powered by
+        </div>
+        <Image src="/powered-by-netlify-dark.png" width={140} height={38} />
       </div>
     </>
   );
